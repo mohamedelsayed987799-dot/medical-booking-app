@@ -17,13 +17,14 @@ simple student project using a mock REST API.
 
 ```
 medical-booking-app/
-├── db.json                # Mock database (doctors + appointments)
+├── db.json                # Mock database (doctors, appointments, users, complaints)
 ├── src/
 │   ├── components/        # Reusable UI components
-│   ├── pages/              # Route-level pages
-│   ├── store/               # Zustand stores
-│   ├── services/           # Axios API calls
+│   ├── pages/              # Route-level pages (incl. Login, Contact)
+│   ├── store/               # Zustand stores (incl. auth, language)
+│   ├── services/           # Axios API calls (incl. auth, complaints)
 │   ├── hooks/                # Custom hooks (e.g. useDebounce)
+│   ├── i18n/                 # Arabic/English translation dictionary
 │   ├── App.jsx              # Routes
 │   ├── main.jsx             # Entry point
 │   └── index.css            # Tailwind + global styles
@@ -82,6 +83,29 @@ Open the app at `http://localhost:5173`.
 - Dark / Light mode toggle
 - Skeleton loading placeholders instead of spinners
 - Simple hover and fade-in animations
+- **Mock Authentication** — login page (`/login`) gated by a `users`
+  collection in `db.json`. Booking and My Appointments are protected
+  routes; you're redirected to `/login` if you're not signed in.
+  Demo account: `demo@curacare.com` / `123456`
+- **Contact & Complaints page** (`/contact`) — static contact phone
+  numbers plus a validated inquiry/complaint form that POSTs to
+  `/complaints` in the mock API
+- **Arabic / English toggle** — a language switch in the navbar
+  (top-right) that translates the UI text and flips the page direction
+  to RTL for Arabic. This is a lightweight translation layer over the
+  main UI text (see `src/i18n/translations.js`); doctor names/bios stay
+  in their original language since they come from the mock API data.
+
+## Demo Accounts
+
+| Email | Password |
+|---|---|
+| demo@curacare.com | 123456 |
+| mohamed@curacare.com | 123456 |
+
+> ⚠️ This is a mock login for demo purposes only — passwords are stored
+> in plain text in `db.json` and checked on the client. This is **not**
+> secure and should never be done in a real production app.
 
 ## Notes
 
