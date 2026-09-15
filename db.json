@@ -11,7 +11,11 @@
       "image": "https://i.pravatar.cc/150?img=47",
       "bio": "Dr. Sarah Jenkins is a board-certified cardiologist with over 12 years of experience helping patients manage heart health through preventive care and modern diagnostics.",
       "education": "MD, Cairo University School of Medicine",
-      "availableDays": ["Sunday", "Tuesday", "Thursday"]
+      "availableDays": [
+        "Sunday",
+        "Tuesday",
+        "Thursday"
+      ]
     },
     {
       "id": "2",
@@ -24,7 +28,11 @@
       "image": "https://i.pravatar.cc/150?img=12",
       "bio": "Dr. Ahmed Fathy specializes in general and cosmetic dermatology, focusing on skin health for patients of all ages.",
       "education": "MD, Ain Shams University",
-      "availableDays": ["Monday", "Wednesday", "Saturday"]
+      "availableDays": [
+        "Monday",
+        "Wednesday",
+        "Saturday"
+      ]
     },
     {
       "id": "3",
@@ -37,7 +45,11 @@
       "image": "https://i.pravatar.cc/150?img=32",
       "bio": "Dr. Alena Vance focuses on internal medicine and preventive care, helping patients build long-term healthy habits.",
       "education": "MD, Alexandria University",
-      "availableDays": ["Sunday", "Monday", "Wednesday"]
+      "availableDays": [
+        "Sunday",
+        "Monday",
+        "Wednesday"
+      ]
     },
     {
       "id": "4",
@@ -50,7 +62,11 @@
       "image": "https://i.pravatar.cc/150?img=45",
       "bio": "Dr. Mona Khalil has dedicated her career to pediatric care, providing gentle and thorough treatment for children from infancy through adolescence.",
       "education": "MD, Fayoum University",
-      "availableDays": ["Tuesday", "Thursday", "Saturday"]
+      "availableDays": [
+        "Tuesday",
+        "Thursday",
+        "Saturday"
+      ]
     },
     {
       "id": "5",
@@ -63,7 +79,11 @@
       "image": "https://i.pravatar.cc/150?img=51",
       "bio": "Dr. Omar Nabil treats musculoskeletal injuries and chronic joint conditions, with a special interest in sports medicine.",
       "education": "MD, Cairo University",
-      "availableDays": ["Monday", "Tuesday", "Friday"]
+      "availableDays": [
+        "Monday",
+        "Tuesday",
+        "Friday"
+      ]
     },
     {
       "id": "6",
@@ -76,7 +96,11 @@
       "image": "https://i.pravatar.cc/150?img=25",
       "bio": "Dr. Yasmin Adel provides comprehensive skincare consultations, including treatment for chronic skin conditions and acne management.",
       "education": "MD, Minya University",
-      "availableDays": ["Sunday", "Wednesday", "Thursday"]
+      "availableDays": [
+        "Sunday",
+        "Wednesday",
+        "Thursday"
+      ]
     },
     {
       "id": "7",
@@ -89,7 +113,11 @@
       "image": "https://i.pravatar.cc/150?img=14",
       "bio": "Dr. Karim Sobhy is an interventional cardiologist experienced in diagnosing and treating a wide range of cardiovascular conditions.",
       "education": "MD, Tanta University",
-      "availableDays": ["Monday", "Thursday", "Saturday"]
+      "availableDays": [
+        "Monday",
+        "Thursday",
+        "Saturday"
+      ]
     },
     {
       "id": "8",
@@ -102,7 +130,11 @@
       "image": "https://i.pravatar.cc/150?img=48",
       "bio": "Dr. Nourhan Samir is passionate about child wellness, offering routine checkups, vaccinations, and developmental screenings.",
       "education": "MD, Beni-Suef University",
-      "availableDays": ["Sunday", "Tuesday", "Friday"]
+      "availableDays": [
+        "Sunday",
+        "Tuesday",
+        "Friday"
+      ]
     }
   ],
   "appointments": [
@@ -130,5 +162,20 @@
       "notes": "",
       "status": "pending"
     }
-  ]
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "Demo User",
+      "email": "demo@curacare.com",
+      "password": "123456"
+    },
+    {
+      "id": "2",
+      "name": "Mohamed El-Sayed",
+      "email": "mohamed@curacare.com",
+      "password": "123456"
+    }
+  ],
+  "complaints": []
 }
