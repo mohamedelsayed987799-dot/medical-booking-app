@@ -83,9 +83,12 @@ Open the app at `http://localhost:5173`.
 - Dark / Light mode toggle
 - Skeleton loading placeholders instead of spinners
 - Simple hover and fade-in animations
-- **Mock Authentication** — login page (`/login`) gated by a `users`
-  collection in `db.json`. Booking and My Appointments are protected
-  routes; you're redirected to `/login` if you're not signed in.
+- **Mock Authentication** — login (`/login`) and register (`/register`)
+  pages backed by a `users` collection in `db.json`. New accounts are
+  created via a real POST request (with a duplicate-email check), and
+  the user is signed in automatically after registering. Booking and
+  My Appointments are protected routes; you're redirected to `/login`
+  if you're not signed in.
   Demo account: `demo@curacare.com` / `123456`
 - **Contact & Complaints page** (`/contact`) — static contact phone
   numbers plus a validated inquiry/complaint form that POSTs to
