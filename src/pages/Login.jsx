@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation, Link } from "react-router-dom";
 import useAuthStore from "../store/useAuthStore";
 import useLanguageStore from "../store/useLanguageStore";
 
@@ -89,6 +89,12 @@ export default function Login() {
 
         <p className="text-xs text-muted text-center pt-1">
           {t("login_demo_hint")} demo@curacare.com / 123456
+        </p>
+        <p className="text-xs text-muted text-center">
+          {t("dont_have_account")}{" "}
+          <Link to="/register" className="text-primary font-medium">
+            {t("register_button")}
+          </Link>
         </p>
       </form>
     </div>
