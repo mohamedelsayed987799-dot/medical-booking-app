@@ -1,4 +1,7 @@
+import useLanguageStore from "../store/useLanguageStore";
+
 export default function AppointmentCard({ appointment, onEdit, onCancel }) {
+  const { t } = useLanguageStore();
   const statusColors = {
     confirmed: "bg-secondary-light text-secondary",
     pending: "bg-tertiary text-primary",
@@ -31,13 +34,13 @@ export default function AppointmentCard({ appointment, onEdit, onCancel }) {
             onClick={() => onEdit(appointment)}
             className="px-3 py-1.5 rounded border border-border dark:border-slate-600 text-sm text-heading dark:text-slate-100 hover:bg-background dark:hover:bg-slate-700 transition-colors"
           >
-            Reschedule
+            {t("reschedule")}
           </button>
           <button
             onClick={() => onCancel(appointment.id)}
             className="px-3 py-1.5 rounded border border-danger/30 text-sm text-danger hover:bg-danger-light transition-colors"
           >
-            Cancel
+            {t("cancel")}
           </button>
         </div>
       </div>

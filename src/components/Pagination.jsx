@@ -1,4 +1,7 @@
+import useLanguageStore from "../store/useLanguageStore";
+
 export default function Pagination({ currentPage, totalPages, onPageChange }) {
+  const { t } = useLanguageStore();
   if (totalPages <= 1) return null;
 
   const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
@@ -10,7 +13,7 @@ export default function Pagination({ currentPage, totalPages, onPageChange }) {
         disabled={currentPage === 1}
         className="px-3 py-1.5 rounded border border-border dark:border-slate-600 text-sm disabled:opacity-40 disabled:cursor-not-allowed hover:bg-background dark:hover:bg-slate-700 transition-colors"
       >
-        Prev
+        {t("prev")}
       </button>
 
       {pages.map((page) => (
@@ -32,7 +35,7 @@ export default function Pagination({ currentPage, totalPages, onPageChange }) {
         disabled={currentPage === totalPages}
         className="px-3 py-1.5 rounded border border-border dark:border-slate-600 text-sm disabled:opacity-40 disabled:cursor-not-allowed hover:bg-background dark:hover:bg-slate-700 transition-colors"
       >
-        Next
+        {t("next")}
       </button>
     </div>
   );

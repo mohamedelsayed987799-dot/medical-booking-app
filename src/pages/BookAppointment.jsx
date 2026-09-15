@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { useParams, useNavigate } from "react-router-dom";
 import { getDoctorById } from "../services/doctorsService";
 import useAppointmentsStore from "../store/useAppointmentsStore";
+import useLanguageStore from "../store/useLanguageStore";
 import ErrorMessage from "../components/ErrorMessage";
 
 const timeSlots = ["09:00 AM", "10:30 AM", "12:00 PM", "02:00 PM", "03:30 PM", "05:00 PM"];
@@ -11,6 +12,7 @@ export default function BookAppointment() {
   const { doctorId } = useParams();
   const navigate = useNavigate();
   const { addAppointment } = useAppointmentsStore();
+  const { t } = useLanguageStore();
 
   const [doctor, setDoctor] = useState(null);
   const [status, setStatus] = useState("loading"); // loading | success | error
@@ -80,15 +82,15 @@ export default function BookAppointment() {
   return (
     <div className="max-w-xl mx-auto px-4 md:px-8 py-10">
       <h1 className="text-2xl font-semibold text-heading dark:text-white mb-1">
-        Book an Appointment
+        {t("book_title")}
       </h1>
       <p className="text-muted text-sm mb-6">
-        with <span className="font-medium text-heading dark:text-slate-100">{doctor.name}</span> &middot; {doctor.specialty}
+        {t("with_word")} <span className="font-medium text-heading dark:text-slate-100">{doctor.name}</span> &middot; {doctor.specialty}
       </p>
 
       {submitted && (
         <div className="mb-4 px-4 py-3 rounded bg-secondary-light text-secondary text-sm font-medium">
-          ✅ Appointment booked! Redirecting to your appointments...
+          ✅ {t("booked_success")}
         </div>
       )}
       {submitError && (
@@ -103,7 +105,7 @@ export default function BookAppointment() {
       >
         <div>
           <label className="block text-sm font-medium text-heading dark:text-slate-100 mb-1.5">
-            Full Name
+            {t("full_name")}
           </label>
           <input
             type="text"
@@ -121,7 +123,7 @@ export default function BookAppointment() {
 
         <div>
           <label className="block text-sm font-medium text-heading dark:text-slate-100 mb-1.5">
-            Phone Number
+            {t("phone_number")}
           </label>
           <input
             type="tel"
@@ -143,7 +145,7 @@ export default function BookAppointment() {
         <div className="grid grid-cols-2 gap-4">
           <div>
             <label className="block text-sm font-medium text-heading dark:text-slate-100 mb-1.5">
-              Date
+              {t("date")}
             </label>
             <input
               type="date"
@@ -158,7 +160,7 @@ export default function BookAppointment() {
 
           <div>
             <label className="block text-sm font-medium text-heading dark:text-slate-100 mb-1.5">
-              Time
+              {t("time")}
             </label>
             <select
               {...register("time", { required: "Please select a time" })}
@@ -166,7 +168,7 @@ export default function BookAppointment() {
               defaultValue=""
             >
               <option value="" disabled>
-                Select a slot
+                {t("select_slot")}
               </option>
               {timeSlots.map((slot) => (
                 <option key={slot} value={slot}>
@@ -182,7 +184,7 @@ export default function BookAppointment() {
 
         <div>
           <label className="block text-sm font-medium text-heading dark:text-slate-100 mb-1.5">
-            Notes (optional)
+            {t("notes_optional")}
           </label>
           <textarea
             {...register("notes")}
@@ -197,7 +199,7 @@ export default function BookAppointment() {
           disabled={isSubmitting}
           className="w-full py-2.5 rounded bg-primary text-white text-sm font-medium hover:bg-primary-dark transition-colors disabled:opacity-60"
         >
-          {isSubmitting ? "Booking..." : "Confirm Appointment"}
+          {isSubmitting ? t("booking") : t("confirm_appointment")}
         </button>
       </form>
     </div>

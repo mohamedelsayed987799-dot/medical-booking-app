@@ -1,30 +1,14 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import useDoctorsStore from "../store/useDoctorsStore";
+import useLanguageStore from "../store/useLanguageStore";
 import DoctorCard from "../components/DoctorCard";
 import { DoctorGridSkeleton } from "../components/LoadingSkeleton";
 import ErrorMessage from "../components/ErrorMessage";
 
-const features = [
-  {
-    icon: "🩺",
-    title: "Verified Specialists",
-    text: "Every doctor listed is board-verified across a wide range of specialties.",
-  },
-  {
-    icon: "⏱️",
-    title: "Easy Scheduling",
-    text: "Pick a time that works for you and book in just a few clicks.",
-  },
-  {
-    icon: "🔔",
-    title: "Manage Anytime",
-    text: "Reschedule or cancel your appointments whenever your plans change.",
-  },
-];
-
 export default function Home() {
   const { doctors, status, error, fetchDoctors } = useDoctorsStore();
+  const { t } = useLanguageStore();
 
   useEffect(() => {
     fetchDoctors();
@@ -32,40 +16,45 @@ export default function Home() {
 
   const featured = doctors.slice(0, 3);
 
+  const features = [
+    { icon: "🩺", title: t("feat1_title"), text: t("feat1_text") },
+    { icon: "⏱️", title: t("feat2_title"), text: t("feat2_text") },
+    { icon: "🔔", title: t("feat3_title"), text: t("feat3_text") },
+  ];
+
   return (
     <div className="max-w-6xl mx-auto px-4 md:px-8">
       {/* Hero */}
       <section className="py-12 md:py-20 grid md:grid-cols-2 gap-10 items-center">
         <div>
           <span className="inline-block px-3 py-1 rounded-full bg-tertiary text-primary text-xs font-semibold uppercase tracking-wide mb-4">
-            Accessible &amp; Gentle Care
+            {t("home_badge")}
           </span>
           <h1 className="text-3xl md:text-4xl font-bold text-heading dark:text-white leading-tight mb-4">
-            Book Your Doctor Appointment Easily
+            {t("home_title")}
           </h1>
           <p className="text-muted text-base md:text-lg mb-6 max-w-md">
-            Find verified specialists, pick a convenient time slot, and manage
-            your health consultations with simplicity and peace of mind.
+            {t("home_subtitle")}
           </p>
           <div className="flex flex-wrap gap-3">
             <Link
               to="/doctors"
               className="px-5 py-2.5 rounded bg-primary text-white text-sm font-medium hover:bg-primary-dark transition-colors"
             >
-              View Doctors →
+              {t("home_view_doctors")} →
             </Link>
             <Link
               to="/appointments"
               className="px-5 py-2.5 rounded border border-border dark:border-slate-600 text-sm font-medium text-heading dark:text-slate-100 hover:bg-background dark:hover:bg-slate-800 transition-colors"
             >
-              My Appointments
+              {t("home_my_appointments")}
             </Link>
           </div>
         </div>
 
         <div className="bg-surface dark:bg-slate-800 border border-border dark:border-slate-700 rounded-lg p-6 shadow-soft">
           <p className="text-sm font-medium text-muted mb-3">
-            Available Tomorrow
+            {t("home_available_tomorrow")}
           </p>
           <div className="grid grid-cols-3 gap-2 mb-4">
             {["09:30 AM", "11:15 AM", "03:45 PM"].map((slot, i) => (
@@ -82,7 +71,7 @@ export default function Home() {
             ))}
           </div>
           <div className="flex items-center justify-between text-sm text-muted">
-            <span>✅ In-person or Video Consultation</span>
+            <span>✅ {t("home_video_or_inperson")}</span>
           </div>
         </div>
       </section>
@@ -91,10 +80,10 @@ export default function Home() {
       <section className="py-10 md:py-16">
         <div className="text-center max-w-lg mx-auto mb-10">
           <span className="text-primary text-xs font-semibold uppercase tracking-widest">
-            The CuraCare Difference
+            {t("home_diff_label")}
           </span>
           <h2 className="text-2xl font-semibold text-heading dark:text-white mt-2">
-            Care designed around calm clarity
+            {t("home_diff_title")}
           </h2>
         </div>
         <div className="grid md:grid-cols-3 gap-5">
@@ -117,10 +106,10 @@ export default function Home() {
       <section className="py-10 md:py-16">
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-2xl font-semibold text-heading dark:text-white">
-            Featured Doctors
+            {t("home_featured")}
           </h2>
           <Link to="/doctors" className="text-primary text-sm font-medium">
-            See all →
+            {t("home_see_all")} →
           </Link>
         </div>
 

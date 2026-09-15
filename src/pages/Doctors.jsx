@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import useDoctorsStore from "../store/useDoctorsStore";
+import useLanguageStore from "../store/useLanguageStore";
 import useDebounce from "../hooks/useDebounce";
 import DoctorCard from "../components/DoctorCard";
 import SearchBar from "../components/SearchBar";
@@ -13,6 +14,7 @@ const PAGE_SIZE = 6;
 
 export default function Doctors() {
   const { doctors, status, error, fetchDoctors } = useDoctorsStore();
+  const { t } = useLanguageStore();
   const [searchInput, setSearchInput] = useState("");
   const [specialty, setSpecialty] = useState("All");
   const [page, setPage] = useState(1);
@@ -52,11 +54,9 @@ export default function Doctors() {
   return (
     <div className="max-w-6xl mx-auto px-4 md:px-8 py-10">
       <h1 className="text-2xl font-semibold text-heading dark:text-white mb-2">
-        Find a Doctor
+        {t("doctors_title")}
       </h1>
-      <p className="text-muted text-sm mb-6">
-        Search by name or filter by specialty to find the right specialist.
-      </p>
+      <p className="text-muted text-sm mb-6">{t("doctors_subtitle")}</p>
 
       <div className="flex flex-col md:flex-row gap-4 mb-6">
         <div className="md:w-80">
@@ -75,8 +75,8 @@ export default function Doctors() {
       {status === "success" && filteredDoctors.length === 0 && (
         <EmptyState
           icon="🔍"
-          title="No doctors found"
-          description="Try a different search term or reset the specialty filter."
+          title={t("no_doctors_title")}
+          description={t("no_doctors_desc")}
         />
       )}
 

@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
+import useLanguageStore from "../store/useLanguageStore";
 
 export default function DoctorCard({ doctor }) {
+  const { t } = useLanguageStore();
   return (
     <div className="bg-surface dark:bg-slate-800 border border-border dark:border-slate-700 rounded-lg p-5 flex flex-col gap-3 hover:shadow-card transition-shadow animate-fade-in">
       <div className="flex items-center gap-3">
@@ -32,13 +34,13 @@ export default function DoctorCard({ doctor }) {
           to={`/doctors/${doctor.id}`}
           className="flex-1 text-center px-3 py-2 rounded border border-border dark:border-slate-600 text-sm font-medium text-heading dark:text-slate-100 hover:bg-background dark:hover:bg-slate-700 transition-colors"
         >
-          View Profile
+          {t("view_profile")}
         </Link>
         <Link
           to={`/book/${doctor.id}`}
           className="flex-1 text-center px-3 py-2 rounded bg-primary text-white text-sm font-medium hover:bg-primary-dark transition-colors"
         >
-          Book
+          {t("book")}
         </Link>
       </div>
     </div>

@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { getDoctorById } from "../services/doctorsService";
+import useLanguageStore from "../store/useLanguageStore";
 import ErrorMessage from "../components/ErrorMessage";
 
 export default function DoctorDetails() {
   const { id } = useParams();
+  const { t } = useLanguageStore();
   const [doctor, setDoctor] = useState(null);
   const [status, setStatus] = useState("loading"); // loading | success | error
   const [error, setError] = useState(null);
@@ -64,21 +66,21 @@ export default function DoctorDetails() {
             to={`/book/${doctor.id}`}
             className="px-5 py-2.5 rounded bg-primary text-white text-sm font-medium hover:bg-primary-dark transition-colors whitespace-nowrap"
           >
-            Book Appointment
+            {t("book_appointment")}
           </Link>
         </div>
 
         <hr className="my-6 border-border dark:border-slate-700" />
 
         <div>
-          <h2 className="font-semibold text-heading dark:text-white mb-2">About</h2>
+          <h2 className="font-semibold text-heading dark:text-white mb-2">{t("about")}</h2>
           <p className="text-muted text-sm leading-relaxed">{doctor.bio}</p>
         </div>
 
         {doctor.education && (
           <div className="mt-5">
             <h2 className="font-semibold text-heading dark:text-white mb-2">
-              Education
+              {t("education")}
             </h2>
             <p className="text-muted text-sm">{doctor.education}</p>
           </div>
@@ -87,7 +89,7 @@ export default function DoctorDetails() {
         {doctor.availableDays && (
           <div className="mt-5">
             <h2 className="font-semibold text-heading dark:text-white mb-2">
-              Available Days
+              {t("available_days")}
             </h2>
             <div className="flex flex-wrap gap-2">
               {doctor.availableDays.map((day) => (
