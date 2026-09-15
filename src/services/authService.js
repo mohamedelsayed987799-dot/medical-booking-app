@@ -19,3 +19,18 @@ export const login = async (email, password) => {
   const { password: _pw, ...safeUser } = user;
   return safeUser;
 };
+
+// Register a new mock user. Checks the email isn't already taken,
+// then POSTs the new user to json-server's /users collection.
+export const register = async ({ name, email, password }) => {
+  const { data: existing } = await api.get("/users", { params: { email } });
+
+  if (existing.length > 0) {
+    throw new Error("An account with this email already exists");
+  }
+
+  const { data: created } = await api.post("/users", { name, email, password });
+
+  const { password: _pw, ...safeUser } = created;
+  return safeUser;
+};

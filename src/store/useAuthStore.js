@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import { login as loginRequest } from "../services/authService";
+import { login as loginRequest, register as registerRequest } from "../services/authService";
 
 const STORAGE_KEY = "curacare_user";
 
@@ -26,6 +26,19 @@ const useAuthStore = create((set) => ({
       return user;
     } catch (err) {
       set({ status: "error", error: err.message || "Login failed" });
+      throw err;
+    }
+  },
+
+  register: async ({ name, email, password }) => {
+    set({ status: "loading", error: null });
+    try {
+      const user = await registerRequest({ name, email, password });
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(user));
+      set({ user, status: "idle" });
+      return user;
+    } catch (err) {
+      set({ status: "error", error: err.message || "Registration failed" });
       throw err;
     }
   },
