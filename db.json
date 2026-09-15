@@ -1,0 +1,134 @@
+{
+  "doctors": [
+    {
+      "id": "1",
+      "name": "Dr. Sarah Jenkins",
+      "specialty": "Cardiology",
+      "rating": 4.9,
+      "reviews": 214,
+      "price": 60,
+      "location": "St. Jude Pavilion, Cairo",
+      "image": "https://i.pravatar.cc/150?img=47",
+      "bio": "Dr. Sarah Jenkins is a board-certified cardiologist with over 12 years of experience helping patients manage heart health through preventive care and modern diagnostics.",
+      "education": "MD, Cairo University School of Medicine",
+      "availableDays": ["Sunday", "Tuesday", "Thursday"]
+    },
+    {
+      "id": "2",
+      "name": "Dr. Ahmed Fathy",
+      "specialty": "Dermatology",
+      "rating": 4.7,
+      "reviews": 158,
+      "price": 45,
+      "location": "NileCare Clinic, Fayoum",
+      "image": "https://i.pravatar.cc/150?img=12",
+      "bio": "Dr. Ahmed Fathy specializes in general and cosmetic dermatology, focusing on skin health for patients of all ages.",
+      "education": "MD, Ain Shams University",
+      "availableDays": ["Monday", "Wednesday", "Saturday"]
+    },
+    {
+      "id": "3",
+      "name": "Dr. Alena Vance",
+      "specialty": "Internal Medicine",
+      "rating": 4.98,
+      "reviews": 240,
+      "price": 65,
+      "location": "CuraCare Main Center",
+      "image": "https://i.pravatar.cc/150?img=32",
+      "bio": "Dr. Alena Vance focuses on internal medicine and preventive care, helping patients build long-term healthy habits.",
+      "education": "MD, Alexandria University",
+      "availableDays": ["Sunday", "Monday", "Wednesday"]
+    },
+    {
+      "id": "4",
+      "name": "Dr. Mona Khalil",
+      "specialty": "Pediatrics",
+      "rating": 4.85,
+      "reviews": 189,
+      "price": 40,
+      "location": "Family Health Clinic, Fayoum",
+      "image": "https://i.pravatar.cc/150?img=45",
+      "bio": "Dr. Mona Khalil has dedicated her career to pediatric care, providing gentle and thorough treatment for children from infancy through adolescence.",
+      "education": "MD, Fayoum University",
+      "availableDays": ["Tuesday", "Thursday", "Saturday"]
+    },
+    {
+      "id": "5",
+      "name": "Dr. Omar Nabil",
+      "specialty": "Orthopedics",
+      "rating": 4.6,
+      "reviews": 132,
+      "price": 55,
+      "location": "CuraCare Sports Medicine",
+      "image": "https://i.pravatar.cc/150?img=51",
+      "bio": "Dr. Omar Nabil treats musculoskeletal injuries and chronic joint conditions, with a special interest in sports medicine.",
+      "education": "MD, Cairo University",
+      "availableDays": ["Monday", "Tuesday", "Friday"]
+    },
+    {
+      "id": "6",
+      "name": "Dr. Yasmin Adel",
+      "specialty": "Dermatology",
+      "rating": 4.75,
+      "reviews": 176,
+      "price": 50,
+      "location": "Skin & Care Clinic, Fayoum",
+      "image": "https://i.pravatar.cc/150?img=25",
+      "bio": "Dr. Yasmin Adel provides comprehensive skincare consultations, including treatment for chronic skin conditions and acne management.",
+      "education": "MD, Minya University",
+      "availableDays": ["Sunday", "Wednesday", "Thursday"]
+    },
+    {
+      "id": "7",
+      "name": "Dr. Karim Sobhy",
+      "specialty": "Cardiology",
+      "rating": 4.8,
+      "reviews": 201,
+      "price": 70,
+      "location": "Heart & Vascular Institute",
+      "image": "https://i.pravatar.cc/150?img=14",
+      "bio": "Dr. Karim Sobhy is an interventional cardiologist experienced in diagnosing and treating a wide range of cardiovascular conditions.",
+      "education": "MD, Tanta University",
+      "availableDays": ["Monday", "Thursday", "Saturday"]
+    },
+    {
+      "id": "8",
+      "name": "Dr. Nourhan Samir",
+      "specialty": "Pediatrics",
+      "rating": 4.9,
+      "reviews": 165,
+      "price": 42,
+      "location": "Little Stars Pediatric Center",
+      "image": "https://i.pravatar.cc/150?img=48",
+      "bio": "Dr. Nourhan Samir is passionate about child wellness, offering routine checkups, vaccinations, and developmental screenings.",
+      "education": "MD, Beni-Suef University",
+      "availableDays": ["Sunday", "Tuesday", "Friday"]
+    }
+  ],
+  "appointments": [
+    {
+      "id": "101",
+      "doctorId": "1",
+      "doctorName": "Dr. Sarah Jenkins",
+      "specialty": "Cardiology",
+      "patientName": "Mohamed El-Sayed",
+      "patientPhone": "01012345678",
+      "date": "2026-09-20",
+      "time": "10:30 AM",
+      "notes": "Routine checkup",
+      "status": "confirmed"
+    },
+    {
+      "id": "102",
+      "doctorId": "4",
+      "doctorName": "Dr. Mona Khalil",
+      "specialty": "Pediatrics",
+      "patientName": "Laila Ibrahim",
+      "patientPhone": "01198765432",
+      "date": "2026-09-22",
+      "time": "12:00 PM",
+      "notes": "",
+      "status": "pending"
+    }
+  ]
+}
