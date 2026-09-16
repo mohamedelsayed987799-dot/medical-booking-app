@@ -4,9 +4,9 @@ import useLanguageStore from "../store/useLanguageStore";
 import { createComplaint } from "../services/complaintsService";
 
 const contactNumbers = [
-  { key: "contact_general", icon: "📞", number: "19555" },
-  { key: "contact_appointments_desk", icon: "🗓️", number: "+20 84 123 4567" },
-  { key: "contact_emergency", icon: "🚑", number: "137" },
+  { key: "contact_general", icon: "📞", number: "19865" },
+  { key: "contact_appointments_desk", icon: "🗓️", number: "+20 11 010 96128" },
+  { key: "contact_emergency", icon: "🚑", number: "123" },
 ];
 
 export default function Contact() {
@@ -24,7 +24,10 @@ export default function Contact() {
   const onSubmit = async (formData) => {
     setSubmitError(null);
     try {
-      await createComplaint({ ...formData, createdAt: new Date().toISOString() });
+      await createComplaint({
+        ...formData,
+        createdAt: new Date().toISOString(),
+      });
       setSubmitted(true);
       reset();
       setTimeout(() => setSubmitted(false), 4000);
@@ -55,7 +58,10 @@ export default function Contact() {
                 <span className="text-2xl">{c.icon}</span>
                 <div>
                   <p className="text-sm text-muted">{t(c.key)}</p>
-                  <p className="font-semibold text-heading dark:text-white" dir="ltr">
+                  <p
+                    className="font-semibold text-heading dark:text-white"
+                    dir="ltr"
+                  >
                     {c.number}
                   </p>
                 </div>
@@ -95,7 +101,9 @@ export default function Contact() {
                 className="w-full px-3.5 py-2.5 rounded border border-border dark:border-slate-600 bg-surface dark:bg-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary"
               />
               {errors.name && (
-                <p className="text-danger text-xs mt-1">{errors.name.message}</p>
+                <p className="text-danger text-xs mt-1">
+                  {errors.name.message}
+                </p>
               )}
             </div>
 
@@ -115,7 +123,9 @@ export default function Contact() {
                 className="w-full px-3.5 py-2.5 rounded border border-border dark:border-slate-600 bg-surface dark:bg-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary"
               />
               {errors.phone && (
-                <p className="text-danger text-xs mt-1">{errors.phone.message}</p>
+                <p className="text-danger text-xs mt-1">
+                  {errors.phone.message}
+                </p>
               )}
             </div>
 
@@ -133,11 +143,15 @@ export default function Contact() {
                 </option>
                 <option value="general">{t("subject_general")}</option>
                 <option value="complaint">{t("subject_complaint")}</option>
-                <option value="appointment_issue">{t("subject_appointment_issue")}</option>
+                <option value="appointment_issue">
+                  {t("subject_appointment_issue")}
+                </option>
                 <option value="other">{t("subject_other")}</option>
               </select>
               {errors.subject && (
-                <p className="text-danger text-xs mt-1">{errors.subject.message}</p>
+                <p className="text-danger text-xs mt-1">
+                  {errors.subject.message}
+                </p>
               )}
             </div>
 
@@ -149,12 +163,17 @@ export default function Contact() {
                 rows={4}
                 {...register("message", {
                   required: t("required_field"),
-                  minLength: { value: 10, message: "Please add a bit more detail" },
+                  minLength: {
+                    value: 10,
+                    message: "Please add a bit more detail",
+                  },
                 })}
                 className="w-full px-3.5 py-2.5 rounded border border-border dark:border-slate-600 bg-surface dark:bg-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary"
               />
               {errors.message && (
-                <p className="text-danger text-xs mt-1">{errors.message.message}</p>
+                <p className="text-danger text-xs mt-1">
+                  {errors.message.message}
+                </p>
               )}
             </div>
 
