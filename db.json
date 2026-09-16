@@ -11,11 +11,7 @@
       "image": "https://i.pravatar.cc/150?img=47",
       "bio": "Dr. Sarah Jenkins is a board-certified cardiologist with over 12 years of experience helping patients manage heart health through preventive care and modern diagnostics.",
       "education": "MD, Cairo University School of Medicine",
-      "availableDays": [
-        "Sunday",
-        "Tuesday",
-        "Thursday"
-      ]
+      "availableDays": ["Sunday", "Tuesday", "Thursday"]
     },
     {
       "id": "2",
@@ -28,11 +24,7 @@
       "image": "https://i.pravatar.cc/150?img=12",
       "bio": "Dr. Ahmed Fathy specializes in general and cosmetic dermatology, focusing on skin health for patients of all ages.",
       "education": "MD, Ain Shams University",
-      "availableDays": [
-        "Monday",
-        "Wednesday",
-        "Saturday"
-      ]
+      "availableDays": ["Monday", "Wednesday", "Saturday"]
     },
     {
       "id": "3",
@@ -45,11 +37,7 @@
       "image": "https://i.pravatar.cc/150?img=32",
       "bio": "Dr. Alena Vance focuses on internal medicine and preventive care, helping patients build long-term healthy habits.",
       "education": "MD, Alexandria University",
-      "availableDays": [
-        "Sunday",
-        "Monday",
-        "Wednesday"
-      ]
+      "availableDays": ["Sunday", "Monday", "Wednesday"]
     },
     {
       "id": "4",
@@ -62,11 +50,7 @@
       "image": "https://i.pravatar.cc/150?img=45",
       "bio": "Dr. Mona Khalil has dedicated her career to pediatric care, providing gentle and thorough treatment for children from infancy through adolescence.",
       "education": "MD, Fayoum University",
-      "availableDays": [
-        "Tuesday",
-        "Thursday",
-        "Saturday"
-      ]
+      "availableDays": ["Tuesday", "Thursday", "Saturday"]
     },
     {
       "id": "5",
@@ -79,11 +63,7 @@
       "image": "https://i.pravatar.cc/150?img=51",
       "bio": "Dr. Omar Nabil treats musculoskeletal injuries and chronic joint conditions, with a special interest in sports medicine.",
       "education": "MD, Cairo University",
-      "availableDays": [
-        "Monday",
-        "Tuesday",
-        "Friday"
-      ]
+      "availableDays": ["Monday", "Tuesday", "Friday"]
     },
     {
       "id": "6",
@@ -96,11 +76,7 @@
       "image": "https://i.pravatar.cc/150?img=25",
       "bio": "Dr. Yasmin Adel provides comprehensive skincare consultations, including treatment for chronic skin conditions and acne management.",
       "education": "MD, Minya University",
-      "availableDays": [
-        "Sunday",
-        "Wednesday",
-        "Thursday"
-      ]
+      "availableDays": ["Sunday", "Wednesday", "Thursday"]
     },
     {
       "id": "7",
@@ -113,11 +89,7 @@
       "image": "https://i.pravatar.cc/150?img=14",
       "bio": "Dr. Karim Sobhy is an interventional cardiologist experienced in diagnosing and treating a wide range of cardiovascular conditions.",
       "education": "MD, Tanta University",
-      "availableDays": [
-        "Monday",
-        "Thursday",
-        "Saturday"
-      ]
+      "availableDays": ["Monday", "Thursday", "Saturday"]
     },
     {
       "id": "8",
@@ -130,11 +102,59 @@
       "image": "https://i.pravatar.cc/150?img=48",
       "bio": "Dr. Nourhan Samir is passionate about child wellness, offering routine checkups, vaccinations, and developmental screenings.",
       "education": "MD, Beni-Suef University",
-      "availableDays": [
-        "Sunday",
-        "Tuesday",
-        "Friday"
-      ]
+      "availableDays": ["Sunday", "Tuesday", "Friday"]
+    },
+    {
+      "id": "9",
+      "name": "Dr. Hesham Fawzy",
+      "specialty": "Neurology",
+      "rating": 4.82,
+      "reviews": 143,
+      "price": 58,
+      "location": "CuraCare Neurology Center, Fayoum",
+      "image": "https://i.pravatar.cc/150?img=33",
+      "bio": "Dr. Hesham Fawzy specializes in diagnosing and treating disorders of the nervous system, including headaches, seizures, and nerve-related conditions.",
+      "education": "MD, Fayoum University",
+      "availableDays": ["Monday", "Wednesday", "Saturday"]
+    },
+    {
+      "id": "10",
+      "name": "Dr. Rania Tawfik",
+      "specialty": "Gynecology",
+      "rating": 4.9,
+      "reviews": 198,
+      "price": 62,
+      "location": "Women's Health Clinic, Fayoum",
+      "image": "https://i.pravatar.cc/150?img=44",
+      "bio": "Dr. Rania Tawfik provides comprehensive women's health services, including prenatal care, routine checkups, and reproductive health consultations.",
+      "education": "MD, Cairo University",
+      "availableDays": ["Sunday", "Tuesday", "Wednesday"]
+    },
+    {
+      "id": "11",
+      "name": "Dr. Tarek Adly",
+      "specialty": "ENT",
+      "rating": 4.7,
+      "reviews": 121,
+      "price": 48,
+      "location": "CuraCare ENT Clinic, Fayoum",
+      "image": "https://i.pravatar.cc/150?img=15",
+      "bio": "Dr. Tarek Adly treats conditions related to the ear, nose, and throat, with a focus on sinus issues and hearing health.",
+      "education": "MD, Ain Shams University",
+      "availableDays": ["Monday", "Thursday", "Sunday"]
+    },
+    {
+      "id": "12",
+      "name": "Dr. Salma Reda",
+      "specialty": "Ophthalmology",
+      "rating": 4.88,
+      "reviews": 167,
+      "price": 55,
+      "location": "Vision Care Center, Fayoum",
+      "image": "https://i.pravatar.cc/150?img=29",
+      "bio": "Dr. Salma Reda offers comprehensive eye exams and treatment for common vision problems, including glaucoma and cataract screening.",
+      "education": "MD, Assiut University",
+      "availableDays": ["Tuesday", "Wednesday", "Friday"]
     }
   ],
   "appointments": [
@@ -179,7 +199,7 @@
     {
       "name": "Mohamed Elsayed",
       "email": "mohamedelsayed987799@gmail.com",
-      "password": "Mohamed1@",
+      "password": "M123456",
       "id": "zTXujI1"
     }
   ],
