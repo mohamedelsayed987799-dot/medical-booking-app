@@ -3,6 +3,13 @@
 A React graduation project for booking doctor appointments. Built as a clean,
 simple student project using a mock REST API.
 
+# Author
+
+- Name: Mohamed El-Sayed Abdel-Aly
+- College: Faiyum Technological College
+- Department: Information Technology
+- Specialization: Software
+
 ## Tech Stack
 
 - **React** (functional components + hooks)
@@ -48,6 +55,7 @@ npm run server
 ```
 
 This runs `json-server` on `http://localhost:3001`, serving:
+
 - `GET/POST/PUT/DELETE /appointments`
 - `GET /doctors`
 - `GET /doctors/:id`
@@ -67,6 +75,7 @@ Open the app at `http://localhost:5173`.
 ## Features
 
 ### Core
+
 - Home page with hero section and featured doctors
 - Doctors listing page with search (debounced) and specialty filtering
 - Doctor details page
@@ -78,6 +87,7 @@ Open the app at `http://localhost:5173`.
 - Fully responsive layout (mobile + desktop)
 
 ### Bonus
+
 - Debounced search on the doctors page
 - Pagination for the doctors list
 - Dark / Light mode toggle
@@ -101,10 +111,10 @@ Open the app at `http://localhost:5173`.
 
 ## Demo Accounts
 
-| Email | Password |
-|---|---|
-| demo@curacare.com | 123456 |
-| mohamed@curacare.com | 123456 |
+| Email                | Password |
+| -------------------- | -------- |
+| demo@curacare.com    | 123456   |
+| mohamed@curacare.com | 123456   |
 
 > ⚠️ This is a mock login for demo purposes only — passwords are stored
 > in plain text in `db.json` and checked on the client. This is **not**
